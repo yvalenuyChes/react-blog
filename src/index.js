@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import {Provider} from 'react-redux'
+import rootReducer from './store/rootReducers'
+import reportWebVitals from './reportWebVitals'
+import './styles/nullstyle.scss'
 
 ReactDOM.render(
   <React.StrictMode>
+  <Provider store={rootReducer}>
     <App />
+  </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
