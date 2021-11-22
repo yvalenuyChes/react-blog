@@ -10,8 +10,12 @@
    &__body{
       height: 100%;
       @include container;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: relative;
+   }
+
+   &__button{
+      position: absolute;
+      right: 0;
+      top: 10px;
    }
 }

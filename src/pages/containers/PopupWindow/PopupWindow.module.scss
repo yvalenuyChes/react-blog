@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 .popup_window{
    display: flex;
    justify-content: center;
@@ -5,6 +7,7 @@
 
    &__title{
       text-align: center;
+      padding: 30px 0;
    }
 
 
@@ -43,10 +46,23 @@
       &::after{
          transform: rotate(-45deg);
       }
+
+
+      &::before:hover,
+      &::after:hover{
+         background-color: grey;
+      }
+
    }
 
    &__button_container{
       width: 100%;
       text-align: center;
+      padding: 50px 0px;
    }
+}
+
+.error{
+   @include error;
+   margin-top: 20px;
 }

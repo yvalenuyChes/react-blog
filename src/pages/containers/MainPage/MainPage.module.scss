@@ -1,4 +1,32 @@
+@import '../../../styles/mixins';
+
+
 .main_page{
+   @include container;
    padding-top: 80px;
    text-align: center; 
+
+
+   &__list{
+     height: 400px;
+     overflow-y: auto;
+     width: 100%;
+     display: grid;
+     grid-gap: 20px;
+     grid-template-columns: auto-fit;
+     grid-template-columns:  repeat( 3,1fr) ;
+     &_item{
+      text-align: center;
+     }
+   }
+}
+
+textarea{
+   display: block;
+   margin: 0 auto;
+   padding: 40px 0px;
+}
+
+.error{
+   @include error;
 }

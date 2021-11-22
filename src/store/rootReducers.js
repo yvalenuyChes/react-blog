@@ -1,8 +1,10 @@
 import { combineReducers, createStore } from 'redux'
 import appReducer from './appReducer'
+import newsFilter from './newsFilter'
 
 const reducers = {
-	appReducer
+	appReducer,
+	newsFilter
 }
 
 const reducer = combineReducers(reducers)

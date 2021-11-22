@@ -1,9 +1,11 @@
 
 import { Button } from '@mui/material'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import classes from './Navigation.module.scss'
 
 export default function Navigation(){
+
+   const authentication = useSelector(state => state.appReducer.auth)
 
    const dispatch = useDispatch()
 
@@ -11,15 +13,20 @@ export default function Navigation(){
       dispatch({type:'OPEN_POPUP'})
    }
 
+   function logout(){
+      dispatch({type:'LOGOUT'})
+   }
+
 
    return(
       <nav className={classes.navigation}>
       <div className={classes.navigation__body}>
-         <div className={classes.nav__image}>
-            <img src = '' alt='logo'/>
-         </div>
          <div className={classes.navigation__button}>
-            <Button onClick={openPopup}>Войти</Button>
+         {
+            authentication 
+            ? <Button ariant='contained' onClick={logout}>Выйти</Button>
+            :  <Button  variant='contained' onClick={openPopup}>Войти</Button>
+         } 
          </div>
       </div>
       </nav>

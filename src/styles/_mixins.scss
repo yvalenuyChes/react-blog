@@ -1,7 +1,12 @@
 @import './variables';
 
-@mixin container(){
+@mixin container{
    max-width: $max-width;
    padding: $containerPadding;
    margin: 0px auto;
+}
+
+@mixin error {
+   font-size: 16px;
+   color: red;
 }
