@@ -5,12 +5,15 @@ import {Provider} from 'react-redux'
 import rootReducer from './store/rootReducers'
 import reportWebVitals from './reportWebVitals'
 import './styles/nullstyle.scss'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-  <Provider store={rootReducer}>
-    <App />
-  </Provider>
+    <Provider store={rootReducer}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
