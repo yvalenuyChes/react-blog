@@ -10,17 +10,17 @@ export const user2 = {
 
 export const posts = [
    {
-      title:'First post',
+      title:'FIRST POST',
       description:'This is first post',
       date:'12.06.2021'
    },
    {
-      title:'Second post',
+      title:'SECOND POST',
       description:'This is second post',
       date:'13.06.2021'
    },
    {
-      title:'Third post',
+      title:'THIRD POST',
       description:'This is third post',
       date:'14.06.2021'
    },

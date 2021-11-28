@@ -22,7 +22,7 @@ export default function News(){
 
    
    function search(event){
-      dispatch({type:'FIND_NEWS', payload:event.target.value} )
+      dispatch({type:'FIND_NEWS', payload:(event.target.value).toUpperCase()} )
    }
 
    
@@ -66,7 +66,7 @@ export default function News(){
             ?
             <div className={classes.news__add__container}>
             <h2 className={classes.news__add_news}>Добавление поста</h2>
-            <TextField className={classes.news__add_news__title} label='Заголовок новости' value = {inputValue} onChange={event => setInputValue(event.target.value)} />
+            <TextField className={classes.news__add_news__title} label='Заголовок новости' value = {inputValue} onChange={event => setInputValue((event.target.value).toUpperCase())}  />
             <TextareaAutosize className={classes.news__add_news__subtitle} rows = '3' value={textAreaValue} onChange={event => setTextAreaValue(event.target.value)} placeholder='Введите текст новости' />
             <Button className={classes.news__add_news__button} onClick={addPost} >Добавить новость</Button>
              <div className={classes.error}>{error}</div>
